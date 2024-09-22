@@ -65,3 +65,6 @@ $(document).ready(function () {
         alert('Response copied to clipboard!');
     });
 });
+document.addEventListener('contextmenu', function(event) {
+    event.preventDefault();
+});
