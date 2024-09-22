@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cURL Request Tool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>cURL Request Tool</h2>
+        <form id="curlForm">
+            <div class="input-group">
+                <label for="url">API URL:</label>
+                <input type="text" id="url" name="url" required>
+            </div>
+            <div id="keyValuePairs">
+                <div class="key-value-pair">
+                    <input type="text" name="key[]" placeholder="Key">
+                    <input type="text" name="value[]" placeholder="Value">
+                    <button type="button" class="add-pair">+</button>
+                    <button type="button" class="remove-pair">-</button>
+                </div>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+
+        <h3>Response</h3>
+        <div id="responseBox">
+            <textarea id="responseText" readonly></textarea>
+            <button id="copyButton">Copy to Clipboard</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
